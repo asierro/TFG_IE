@@ -88,8 +88,6 @@ for line in open(labels_file, encoding='utf-8'):
     output = prefix_beam_search(ctc_output, ALPHABET, BLANK_TOKEN, END_TOKEN, SPACE_TOKEN, lm=lm_prob)
     j += 1
     print(j)
-    if j==100:
-        break
 
     labels.append(label)
     predictions.append(output)
